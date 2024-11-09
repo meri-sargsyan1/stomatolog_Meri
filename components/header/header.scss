@@ -1,0 +1,224 @@
+@import './../mixins.scss';
+
+header {
+    width: 100%;
+    height: 51px;
+    min-width: 320px;
+    background-color: rgba(77, 99, 111, 255);
+    @include flex;
+
+    nav {
+        width: 450px;
+        height: 100%;
+        @include flex;
+
+        .logo {
+            width: 121px;
+            height: 100%;
+            @include flex;
+            padding: 0 18px;
+            font-size: 18px;
+            background: rgba(58, 75, 83, 255);
+            color: rgba(231, 224, 218, 255);
+            text-transform: capitalize;
+            font-weight: 600;
+
+            &:hover {
+                background: rgb(195, 192, 192);
+                color: #3A4B53;
+            }
+
+        }
+
+        ul {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            @include flex;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                width: inherit;
+                height: 100%;
+                // position: relative;
+
+                a {
+                    display: block;
+                    height: 100%;
+                    @include flex;
+                    justify-content: center;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 600;
+
+                    sup {
+                        color: black;
+                        text-decoration: none;
+                        border-radius: 55%;
+                        background: #4CAF50;
+                        display: block;
+                        display: flex;
+                        width: 22px;
+                        height: 18px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                }
+
+                &:hover {
+                    background: white;
+                    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+
+                    a {
+                        color: #3A4B53;
+                    }
+                }
+
+
+                ul {
+                    border: solid;
+                    @include flex;
+                    flex-direction: column;
+                   
+                    // height: 50px;
+                    width: max-content;
+                    position: absolute;
+                    // bottom: 0;
+                    // transform: translateY(100%);
+                    background: white;
+                    display: none;
+
+                    li {
+                        width: 100%;
+                        justify-content: flex-start;
+                        @include flex;
+                        padding: 0 18px;
+                        background: aqua;
+
+                        a {
+                            color: #3A4B53;
+                            font-size: 18px;
+                            text-decoration: none;
+                            background: aqua;
+                        }
+
+                        &:hover {
+                            background-color: rgb(226, 224, 224);
+
+                        }
+                    }
+
+
+                }
+            }
+
+            #dropdown:hover {
+                background-color: rgb(195, 192, 192);
+                color: black;
+
+                ul {
+                    display: block;
+
+                    li {
+                        background-color:white;
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    .icon {
+        width: 63px;
+        height: 100%;
+        border: solid;
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    header {
+
+        nav {
+            ul {
+                display: none;
+            }
+        }
+
+        #profail {
+            display: none;
+        }
+
+        .icon {
+
+            height: 100%;
+            display: block;
+            background: #4D636F;
+            border: none;
+
+            .btn-group {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                color: white;
+                align-items: center;
+                justify-content: center;
+                // flex-direction: ;
+
+
+                >button {
+                    background: none;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    color: white;
+
+                    &:hover {
+                        background: white;
+                        color: black;
+                    }
+
+                    svg {
+                        font-size: 18px;
+                        height: 17.6px;
+                    }
+                }
+
+                ul {
+                    border: solid;
+                    background: rgb(77, 99, 111);
+
+                    width: 100vw;
+                    transform: translateY(-2px);
+                    border-radius: 0;
+                    border: none;
+
+
+                    li {
+                        button {
+                            background: rgb(77, 99, 111);
+
+                            &:hover {
+
+                                background: rgb(226, 224, 224);
+
+                            }
+                        }
+
+                    }
+                }
+
+
+            }
+
+        }
+    }
+}

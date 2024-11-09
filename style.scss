@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+// @import './components/header/header.scss';
+@import './components/main/main.scss';
+@import './components/header/header.scss';
+@import './components/footer/footer.scss';
